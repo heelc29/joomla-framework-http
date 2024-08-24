@@ -25,7 +25,7 @@ local composer(phpversion, params) = {
 local phpunit(phpversion) = {
     name: "PHPUnit",
     image: "joomlaprojects/docker-images:php" + phpversion,
-    [if phpversion == "8.3" then "failure"]: "ignore",
+    [if phpversion == "8.4" then "failure"]: "ignore",
     commands: [
       "php -S localhost:8080 -t Tests/stubs &",
       "vendor/bin/phpunit"
@@ -106,4 +106,5 @@ local pipeline(name, phpversion, params) = {
     pipeline("8.1 lowest", "8.1", "--prefer-stable --prefer-lowest"),
     pipeline("8.1", "8.1", "--prefer-stable"),
     pipeline("8.2", "8.2", "--prefer-stable"),
+    pipeline("8.3", "8.3", "--prefer-stable"),
 ]
