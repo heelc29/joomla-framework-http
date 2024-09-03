@@ -134,6 +134,6 @@ volumes:
   name: composer-cache
 ---
 kind: signature
-hmac: 22dea03e9152e3df41f95a832d2edb6b6a2ba49720766ded75238d26578e674d
+hmac: TODO
 
 ...
